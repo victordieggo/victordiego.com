@@ -8,6 +8,10 @@
     max-width: 1240px;
 }
 
+.wrapper-large {
+    max-width: 1440px;
+}
+
 /*============================== GRID CORE ===========================*/
 
 .row {
@@ -448,5 +452,5 @@
     .row-no-padding .xs-12 {
         width: 100%;
     }
-	
+
 }

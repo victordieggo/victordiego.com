@@ -296,9 +296,9 @@ textarea {
 }
 
 /*=============================== MISC ===============================*/
-
-.centered,
-.wrapper {
+.wrapper-large,
+.wrapper,
+.centered {
     margin: 0 auto;
 }
 

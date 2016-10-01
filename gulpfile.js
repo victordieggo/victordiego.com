@@ -25,6 +25,7 @@ gulp.task('css', function () {
         'assets/css/src/reset.css',
         'assets/css/src/grid.css',
         'assets/css/src/typography.css',
+        'assets/css/src/icons.css',
         'assets/css/src/base.css',
         'assets/css/src/form.css',
         'assets/css/src/buttons.css',
