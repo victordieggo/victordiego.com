@@ -33,7 +33,7 @@
 
 .active,
 .main-nav li:hover > a {
-    background-color: #0d6788;
+    color: #e0b723;
 }
 
 /*======================== LARGE/LG RESOLUTIONS ======================*/
@@ -48,11 +48,6 @@
         display: block;
     }
 
-    .active,
-    .main-nav li:hover > a {
-        border-radius: 0.3em;
-    }
-
 
 }
 
@@ -62,8 +57,9 @@
 
     .main-nav {
         position: absolute;
-        top: 4.6em;
+        top: 4.8em;
         left: 0;
+        z-index: -1;
         width: 100%;
         overflow-y: auto;
         overflow-x: hidden;

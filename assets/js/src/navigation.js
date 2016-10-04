@@ -1,5 +1,5 @@
 /* =====================================================================
- * SPACEMAN MOBILE NAVIGATION 1.9.0
+ * SPACEMAN MOBILE NAVIGATION
  * ===================================================================*/
 /*global $, window, document*/
 
@@ -9,6 +9,7 @@
 
 var nav = $('.main-nav'),
     navBtn = $('.nav-btn'),
+    header = $('.main-header'),
     page = $('html, body'),
     parentItem = $('.menu-item-has-children'),
     activateScroll = $('a[href*="#"]');
@@ -20,6 +21,9 @@ var nav = $('.main-nav'),
 function openNavigation() {
     'use strict';
     nav.addClass('main-nav-is-active');
+    if ($(window).scrollTop() <= 10) {
+        header.addClass('bg-darker');
+    }
 }
 
 //-------------------------------------------------------------------
@@ -48,6 +52,9 @@ $(parentItem).each(function () {
 function closeNavigation() {
     'use strict';
     nav.removeClass('main-nav-is-active');
+    if ($(window).scrollTop() <= 10) {
+        header.removeClass('bg-darker');
+    }
 }
 
 //-------------------------------------------------------------------
@@ -57,13 +64,15 @@ function closeNavigation() {
 function resizeFallback() {
     'use strict';
     if (window.innerWidth > 992) {
-        page.removeClass('hide-overflow');
+        if ($(window).scrollTop() <= 10) {
+            header.removeClass('bg-darker');
+        }
         $('ul', nav).css({
             'display': ''
         });
     } else {
-        if (nav.hasClass('main-nav-is-active')) {
-            page.addClass('hide-overflow');
+        if ((nav.hasClass('main-nav-is-active') && ($(window).scrollTop() <= 10))) {
+            header.addClass('bg-darker');
         }
     }
 }
@@ -76,9 +85,9 @@ function scrollNavigation() {
     'use strict';
     var windscroll = $(window).scrollTop();
     if (windscroll >= 10) {
-        $('header').addClass('bg-darker');
+        $(header).addClass('bg-darker');
     } else {
-        $('header').removeClass('bg-darker');
+        $(header).removeClass('bg-darker');
     }
     if (windscroll >= 100) {
         $('section').each(function (i) {

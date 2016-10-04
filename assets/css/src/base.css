@@ -339,6 +339,7 @@ input,
 select,
 textarea,
 .main-nav a,
+.main-header,
 .smooth-transition {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
