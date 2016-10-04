@@ -11,46 +11,25 @@
 
 <body>
 
-    <div class="screen-cover fixed full-size hide"></div>
-
     <!--============================ HEADER ============================-->
-    <header class="bg-darker text-white">
+    <header class="fixed full-width text-white smooth-transition">
         <div class="wrapper-large">
             <div class="row">
                 <div class="col-6 vcenter">
-                    <h3 class="inline text-uppercase">&#60;vd&#62;</h3>
+                    <a href="#about">
+                        <h3 class="inline text-uppercase">&#60;vd&#62;</h3>
+                    </a>
                 </div><!--
                 AVOID DISPLAY INLINE LINE BREAK
                 --><div class="col-6 vcenter">
 
                     <!--============================ NAVIGATION ============================-->
-                    <nav class="main-nav fright smooth-transition">
+                    <nav class="main-nav fright">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li class="menu-item-has-children">
-                                <a href="#">About</a>
-								<ul>
-                                    <li class="menu-item-has-children">
-										<a href="#">Lorem Ipsum</a>
-                                        <ul>
-                                            <li><a href="#">Dolor Sit Amet</a></li>
-                                            <li><a href="#">Lorem Ipsum</a></li>
-                                        </ul>
-                                    </li>
-									<li class="menu-item-has-children">
-										<a href="#">Dolor Sit Amet</a>
-										<ul>
-											<li><a href="#">Lorem Ipsum</a></li>
-											<li><a href="#">Dolor Sit</a></li>
-											<li> <a href="#">In Faucibus</a></li>
-											<li><a href="#">Velit Semper</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
+                            <li><a href="#about">sobre</a></li>
+                            <li><a href="#projects">projetos</a></li>
+                            <li><a href="#contact">contato</a></li>
+                        </ul>
                     </nav>
                     <!--============================ /NAVIGATION ============================-->
 
@@ -63,7 +42,7 @@
     <!--============================ /HEADER ============================-->
 
     <!--============================ ABOUT ============================-->
-    <section id="about" class="about bg-dark">
+    <section id="about" class="about bg-darker">
         <div class="wrapper-large">
             <div class="row">
                 <div class="col-7 sm-12">
@@ -71,7 +50,7 @@
                         <div class="table-cell vcenter">
                             <h1 class="about-title text-white">Desenvolvedor Front-End e Wordpress</h1>
                             <article class="spacer-15 text-white">
-                                <p>Opa! Tudo bem? Meu nome é Victor, tenho 25 anos e sou um desenvolvedor de Guarulhos-SP. Comecei na área em 2009 ainda como designer, passando para o desenvolvimento logo depois. Atualmente trabalho como freelancer, me dedicado principalmente a áreas como wordpress, front-end, design responsivo e experiência do usuário.</p>
+                                <p>Opa! Tudo bem? Meu nome é Victor, tenho 25 anos e sou um desenvolvedor de Guarulhos-SP. Comecei na área em 2009 ainda como designer, passando para o desenvolvimento pouco tempo depois. Atualmente trabalho como freelancer, me dedicado principalmente a áreas como wordpress, front-end, design responsivo e experiência do usuário.</p>
                             </article>
                             <a class="icon-stack title-5" href="https://github.com/victordieggo" target="_blank">
                                 <i class="icon icon-circle icon-stack-2x text-white"></i>
@@ -133,12 +112,13 @@
     <section id="contact" class="contact bg-lightgrey">
         <div class="wrapper">
             <div class="row">
-                <div class="col-7 sm-12">
-                    <div class="table full-width">
-                        <div class="table-cell vcenter">
-                            <h1 class="about-title">Contato</h1>
-                        </div>
-                    </div>
+                <div class="col-6 sm-12">
+                    <form class="" action="index.html" method="post">
+                        <input class="spacer-bottom-10" type="text" name="name" placeholder="seu nome*">
+                        <input class="spacer-bottom-10" type="email" name="email" placeholder="seu email*">
+                        <textarea class="spacer-bottom-10" name="message" rows="4" placeholder="sua mensagem*"></textarea>
+                        <input class="btn btn-outline full-width" type="submit" name="name" value="Enviar">
+                    </form>
                 </div>
             </div>
         </div>
@@ -146,11 +126,22 @@
     <!--============================ /CONTACT ============================-->
 
     <!--============================ FOOTER ============================-->
-    <footer class="bg-darker text-white">
+    <footer class="bg-darker">
         <div class="wrapper">
             <div class="row">
                 <div class="col-12 pad-05 align-center">
-                    <small>Spaceman - Desenvolvido por <a class="no-underline" href="http://victordiego.com/" target="_blank">V.</a></small>
+                    <a class="icon-stack title-5" href="https://github.com/victordieggo" target="_blank">
+                        <i class="icon icon-circle icon-stack-2x text-white"></i>
+                        <i class="icon icon-github icon-stack-1x"></i>
+                    </a>
+                    <a class="icon-stack title-5" href="" target="_blank">
+                        <i class="icon icon-circle icon-stack-2x text-white"></i>
+                        <i class="icon icon-twitter icon-stack-1x"></i>
+                    </a>
+                    <a class="icon-stack title-5" href="" target="_blank">
+                        <i class="icon icon-circle icon-stack-2x text-white"></i>
+                        <i class="icon icon-linkedin icon-stack-1x"></i>
+                    </a>
                 </div>
             </div>
         </div>

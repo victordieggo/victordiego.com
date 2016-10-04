@@ -1,17 +1,17 @@
 /* =====================================================================
  * SPACEMAN MOBILE NAVIGATION 1.9.0
  * ===================================================================*/
-/*global $, jQuery, window, document*/
+/*global $, window, document*/
 
 //-------------------------------------------------------------------
 // SET VARIABLES
 //-------------------------------------------------------------------
 
-var screenCover = jQuery('.screen-cover'),
-    nav         = jQuery('.main-nav'),
-    navBtn      = jQuery('.nav-btn'),
-    page        = jQuery('html, body'),
-    parentItem  = jQuery('.menu-item-has-children');
+var nav = $('.main-nav'),
+    navBtn = $('.nav-btn'),
+    page = $('html, body'),
+    parentItem = $('.menu-item-has-children'),
+    activateScroll = $('a[href*="#"]');
 
 //-------------------------------------------------------------------
 // FUNCTION: OPEN MOBILE NAVIGATION
@@ -20,23 +20,21 @@ var screenCover = jQuery('.screen-cover'),
 function openNavigation() {
     'use strict';
     nav.addClass('main-nav-is-active');
-    page.addClass('hide-overflow');
-    screenCover.removeClass('hide');
 }
 
 //-------------------------------------------------------------------
 // FUNCTION: OPEN/CLOSE NAVIGATION SUB ITEMS
 //-------------------------------------------------------------------
 
-jQuery(parentItem).each(function () {
+$(parentItem).each(function () {
     'use strict';
-    jQuery('a:first', this).click(function (event) {
+    $('a:first', this).click(function (event) {
         event.preventDefault();
     });
-    jQuery(this).click(function () {
+    $(this).click(function () {
         if (window.innerWidth <= 992) {
-            jQuery(this).toggleClass('menu-item-is-active');
-            jQuery('ul', this).children().click(function (event) {
+            $(this).toggleClass('menu-item-is-active');
+            $('ul', this).children().click(function (event) {
                 event.stopPropagation();
             });
         }
@@ -50,8 +48,6 @@ jQuery(parentItem).each(function () {
 function closeNavigation() {
     'use strict';
     nav.removeClass('main-nav-is-active');
-    page.removeClass('hide-overflow');
-    screenCover.addClass('hide');
 }
 
 //-------------------------------------------------------------------
@@ -62,15 +58,38 @@ function resizeFallback() {
     'use strict';
     if (window.innerWidth > 992) {
         page.removeClass('hide-overflow');
-        screenCover.addClass('hide');
-        jQuery('ul', nav).css({
+        $('ul', nav).css({
             'display': ''
         });
     } else {
         if (nav.hasClass('main-nav-is-active')) {
             page.addClass('hide-overflow');
-            screenCover.removeClass('hide');
         }
+    }
+}
+
+//-------------------------------------------------------------------
+// FUNCTION: SCROLL NAVIGATION
+//-------------------------------------------------------------------
+
+function scrollNavigation() {
+    'use strict';
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 10) {
+        $('header').addClass('bg-darker');
+    } else {
+        $('header').removeClass('bg-darker');
+    }
+    if (windscroll >= 100) {
+        $('section').each(function (i) {
+            if ($(this).position().top <= windscroll + 84) {
+                $('nav a.active').removeClass('active');
+                $('nav a').eq(i).addClass('active');
+            }
+        });
+    } else {
+        $('nav a.active').removeClass('active');
+        $('nav a:first').addClass('active');
     }
 }
 
@@ -78,11 +97,27 @@ function resizeFallback() {
 // CALL FUNCTIONS
 //-------------------------------------------------------------------
 
-jQuery(navBtn).on('click', function () {
+$(navBtn).on('click', function () {
     'use strict';
-    this.blur();
-    openNavigation();
+    if (nav.hasClass('main-nav-is-active')) {
+        closeNavigation();
+    } else {
+        openNavigation();
+    }
 });
-jQuery(nav).on('swipeleft', closeNavigation);
-jQuery(screenCover).on('swipeleft click', closeNavigation);
-jQuery(window).on('resize', resizeFallback);
+
+$(activateScroll).on('click', function () {
+    'use strict';
+    closeNavigation();
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (target.length) {
+        $(page).animate({
+            scrollTop: target.offset().top
+        }, 1000);
+        return false;
+    }
+});
+$(window).on('resize', resizeFallback);
+$(window).on('scroll', scrollNavigation);
+$(document).on('ready', scrollNavigation);
