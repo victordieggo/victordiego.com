@@ -15,15 +15,34 @@ var nav = $('.main-nav'),
     activateScroll = $('a[href*="#"]');
 
 //-------------------------------------------------------------------
+// FUNCTION: HEADER BACKGROUND FALLBACK
+//-------------------------------------------------------------------
+
+function headerBackground() {
+    'use strict';
+    if (window.innerWidth <= 992) {
+        if ($(window).scrollTop() <= 10) {
+            if ((nav.hasClass('main-nav-is-active'))) {
+                header.addClass('bg-darker');
+            } else {
+                header.removeClass('bg-darker');
+            }
+        }
+    } else {
+        if ($(window).scrollTop() <= 10) {
+            header.removeClass('bg-darker');
+        }
+    }
+}
+
+//-------------------------------------------------------------------
 // FUNCTION: OPEN MOBILE NAVIGATION
 //-------------------------------------------------------------------
 
 function openNavigation() {
     'use strict';
     nav.addClass('main-nav-is-active');
-    if ($(window).scrollTop() <= 10) {
-        header.addClass('bg-darker');
-    }
+    headerBackground();
 }
 
 //-------------------------------------------------------------------
@@ -52,9 +71,7 @@ $(parentItem).each(function () {
 function closeNavigation() {
     'use strict';
     nav.removeClass('main-nav-is-active');
-    if ($(window).scrollTop() <= 10) {
-        header.removeClass('bg-darker');
-    }
+    headerBackground();
 }
 
 //-------------------------------------------------------------------
@@ -64,16 +81,9 @@ function closeNavigation() {
 function resizeFallback() {
     'use strict';
     if (window.innerWidth > 992) {
-        if ($(window).scrollTop() <= 10) {
-            header.removeClass('bg-darker');
-        }
         $('ul', nav).css({
             'display': ''
         });
-    } else {
-        if ((nav.hasClass('main-nav-is-active') && ($(window).scrollTop() <= 10))) {
-            header.addClass('bg-darker');
-        }
     }
 }
 
@@ -85,10 +95,11 @@ function scrollNavigation() {
     'use strict';
     var windscroll = $(window).scrollTop();
     if (windscroll >= 10) {
-        $(header).addClass('bg-darker');
+        header.addClass('bg-darker');
     } else {
-        $(header).removeClass('bg-darker');
+        header.removeClass('bg-darker');
     }
+    headerBackground();
     if (windscroll >= 100) {
         $('section').each(function (i) {
             if ($(this).position().top <= windscroll + 84) {
@@ -127,6 +138,7 @@ $(activateScroll).on('click', function () {
         return false;
     }
 });
-$(window).on('resize', resizeFallback);
+
+$(window).on('resize', resizeFallback, headerBackground);
 $(window).on('scroll', scrollNavigation);
 $(document).on('ready', scrollNavigation);

@@ -48,7 +48,6 @@
         display: block;
     }
 
-
 }
 
 /*======================= MEDIUM/MD RESOLUTIONS ======================*/
@@ -57,10 +56,9 @@
 
     .main-nav {
         position: absolute;
-        top: 4.8em;
+        top: 100%;
         left: 0;
-        z-index: -1;
-        width: 100%;
+        right: 0;
         overflow-y: auto;
         overflow-x: hidden;
         height: 0;

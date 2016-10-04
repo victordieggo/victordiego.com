@@ -59,6 +59,7 @@ hr,
     margin-right: 0.1em;
     content: "{";
 }
+
 .logo:after {
     margin-left: 0.1em;
     content: "}";
@@ -69,15 +70,16 @@ hr,
  * ===================================================================*/
 
 .about {
-    background-image: url('../../img/header.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url('../../img/header.png') fixed center center no-repeat;
     background-size: cover;
 }
 
 .about .table {
-    height: 60vh;
+    height: 65vh;
+}
+
+.about a {
+    margin-right: 0.5em;
 }
 
 section {
