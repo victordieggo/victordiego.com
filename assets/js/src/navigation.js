@@ -1,39 +1,34 @@
 /* =====================================================================
  * SPACEMAN MOBILE NAVIGATION
  * ===================================================================*/
-/*global $, window, document*/
+/*global $, window*/
 
 //-------------------------------------------------------------------
 // SET VARIABLES
 //-------------------------------------------------------------------
 
-var nav = $('.main-nav'),
-    navBtn = $('.nav-btn'),
-    header = $('.main-header'),
-    page = $('html, body'),
-    parentItem = $('.menu-item-has-children'),
-    activateScroll = $('a[href*="#"]');
+var nav            = $('.main-nav'),
+    navBtn         = $('.nav-btn'),
+    header         = $('.main-header'),
+    page           = $('html, body'),
+    parentItem     = $('.menu-item-has-children'),
+    activateScroll = $('a[href*="#"]'),
+    breakPoint     = window.innerWidth,
+    scrollPosition = $(window).scrollTop();
 
 //-------------------------------------------------------------------
-// FUNCTION: HEADER BACKGROUND FALLBACK
+// UPDATE VARIABLES
 //-------------------------------------------------------------------
 
-function headerBackground() {
+$(window).on('resize', function getBreakpoint() {
     'use strict';
-    if (window.innerWidth <= 992) {
-        if ($(window).scrollTop() <= 10) {
-            if ((nav.hasClass('main-nav-is-active'))) {
-                header.addClass('bg-darker');
-            } else {
-                header.removeClass('bg-darker');
-            }
-        }
-    } else {
-        if ($(window).scrollTop() <= 10) {
-            header.removeClass('bg-darker');
-        }
-    }
-}
+    breakPoint = window.innerWidth;
+});
+
+$(window).on('scroll', function getScrollposition() {
+    'use strict';
+    scrollPosition = $(window).scrollTop();
+});
 
 //-------------------------------------------------------------------
 // FUNCTION: OPEN MOBILE NAVIGATION
@@ -42,7 +37,19 @@ function headerBackground() {
 function openNavigation() {
     'use strict';
     nav.addClass('main-nav-is-active');
-    headerBackground();
+    header.addClass('bg-darker');
+}
+
+//-------------------------------------------------------------------
+// FUNCTION: CLOSE MOBILE NAVIGATION
+//-------------------------------------------------------------------
+
+function closeNavigation() {
+    'use strict';
+    nav.removeClass('main-nav-is-active');
+    if (scrollPosition <= 1) {
+        header.removeClass('bg-darker');
+    }
 }
 
 //-------------------------------------------------------------------
@@ -55,7 +62,7 @@ $(parentItem).each(function () {
         event.preventDefault();
     });
     $(this).click(function () {
-        if (window.innerWidth <= 992) {
+        if (breakPoint <= 992) {
             $(this).toggleClass('menu-item-is-active');
             $('ul', this).children().click(function (event) {
                 event.stopPropagation();
@@ -65,25 +72,27 @@ $(parentItem).each(function () {
 });
 
 //-------------------------------------------------------------------
-// FUNCTION: CLOSE MOBILE NAVIGATION
+// FUNCTION: ADD/REMOVE HEADER BACKGROUND
 //-------------------------------------------------------------------
 
-function closeNavigation() {
+function headerBackground() {
     'use strict';
-    nav.removeClass('main-nav-is-active');
-    headerBackground();
-}
-
-//-------------------------------------------------------------------
-// FUNCTION: MOBILE NAVIGATION RESIZE FALLBACK
-//-------------------------------------------------------------------
-
-function resizeFallback() {
-    'use strict';
-    if (window.innerWidth > 992) {
-        $('ul', nav).css({
-            'display': ''
-        });
+    if (breakPoint >= 992) {
+        if (scrollPosition >= 10) {
+            header.addClass('bg-darker fixed-header');
+        } else {
+            header.removeClass('bg-darker fixed-header');
+        }
+    } else {
+        if (!nav.hasClass('main-nav-is-active')) {
+            if (scrollPosition >= 1) {
+                header.addClass('bg-darker');
+            } else {
+                header.removeClass('bg-darker');
+            }
+        } else {
+            header.addClass('bg-darker');
+        }
     }
 }
 
@@ -93,23 +102,16 @@ function resizeFallback() {
 
 function scrollNavigation() {
     'use strict';
-    var windscroll = $(window).scrollTop();
-    if (windscroll >= 10) {
-        header.addClass('bg-darker');
-    } else {
-        header.removeClass('bg-darker');
-    }
-    headerBackground();
-    if (windscroll >= 100) {
+    if (scrollPosition >= 100) {
         $('section').each(function (i) {
-            if ($(this).position().top <= windscroll + 84) {
-                $('nav a.active').removeClass('active');
-                $('nav a').eq(i).addClass('active');
+            if ($(this).position().top <= scrollPosition + 80) {
+                $('a.menu-item-is-active', nav).removeClass('menu-item-is-active');
+                $('a', nav).eq(i).addClass('menu-item-is-active');
             }
         });
     } else {
-        $('nav a.active').removeClass('active');
-        $('nav a:first').addClass('active');
+        $('a.menu-item-is-active', nav).removeClass('menu-item-is-active');
+        $('a:first', nav).addClass('menu-item-is-active');
     }
 }
 
@@ -139,6 +141,5 @@ $(activateScroll).on('click', function () {
     }
 });
 
-$(window).on('resize', resizeFallback, headerBackground);
-$(window).on('scroll', scrollNavigation);
-$(document).on('ready', scrollNavigation);
+$(window).on('scroll resize', headerBackground);
+$(window).on('load scroll', scrollNavigation);

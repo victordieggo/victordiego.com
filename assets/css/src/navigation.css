@@ -20,7 +20,6 @@
 
 .main-nav a {
     display: block;
-    padding: 0.7em 1em;
 }
 
 .main-nav ul {
@@ -31,8 +30,8 @@
     background-color: #222;
 }
 
-.active,
-.main-nav li:hover > a {
+.main-nav li > a:hover,
+.menu-item-is-active {
     color: #e0b723;
 }
 
@@ -42,6 +41,10 @@
 
     .main-nav > ul > li {
         display: inline-block;
+    }
+
+    .main-nav > ul > li > a {
+        margin-left: 2.5em;
     }
 
     .main-nav li:hover > ul {

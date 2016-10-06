@@ -296,6 +296,7 @@ textarea {
 }
 
 /*=============================== MISC ===============================*/
+
 .wrapper-large,
 .wrapper,
 .centered {
@@ -340,6 +341,7 @@ select,
 textarea,
 .main-nav a,
 .main-header,
+.main-header .row,
 .smooth-transition {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
