@@ -59,7 +59,8 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
     browserSync.init({
-        proxy: 'localhost/' + path.basename(__dirname)
+        proxy: 'localhost/' + path.basename(__dirname),
+        open: false
     });
     gulp.watch(['assets/js/src/*.js'], ['js']);
     gulp.watch(['assets/css/src/*.css'], ['css']);
