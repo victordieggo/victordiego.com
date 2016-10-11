@@ -17,7 +17,7 @@ var nav            = $('.main-nav'),
     scrollPosition = $(window).scrollTop();
 
 //-------------------------------------------------------------------
-// UPDATE VARIABLES
+// UPDATE WINDOW WIDTH/SCROLL POSITION
 //-------------------------------------------------------------------
 
 $(window).on('resize', function getBreakpoint() {
@@ -31,13 +31,38 @@ $(window).on('scroll', function getScrollposition() {
 });
 
 //-------------------------------------------------------------------
+// FUNCTION: ADD/REMOVE HEADER BACKGROUND
+//-------------------------------------------------------------------
+
+function headerBackground() {
+    'use strict';
+    if (breakPoint >= 992) {
+        if (scrollPosition >= 10) {
+            header.addClass('bg-darker fixed-header');
+        } else {
+            header.removeClass('bg-darker fixed-header');
+        }
+    } else {
+        if (!nav.hasClass('main-nav-is-active')) {
+            if (scrollPosition > 0) {
+                header.addClass('bg-darker');
+            } else {
+                header.removeClass('bg-darker');
+            }
+        } else {
+            header.addClass('bg-darker');
+        }
+    }
+}
+
+//-------------------------------------------------------------------
 // FUNCTION: OPEN MOBILE NAVIGATION
 //-------------------------------------------------------------------
 
 function openNavigation() {
     'use strict';
     nav.addClass('main-nav-is-active');
-    header.addClass('bg-darker');
+    headerBackground();
 }
 
 //-------------------------------------------------------------------
@@ -47,9 +72,7 @@ function openNavigation() {
 function closeNavigation() {
     'use strict';
     nav.removeClass('main-nav-is-active');
-    if (scrollPosition <= 1) {
-        header.removeClass('bg-darker');
-    }
+    headerBackground();
 }
 
 //-------------------------------------------------------------------
@@ -70,31 +93,6 @@ $(parentItem).each(function () {
         }
     });
 });
-
-//-------------------------------------------------------------------
-// FUNCTION: ADD/REMOVE HEADER BACKGROUND
-//-------------------------------------------------------------------
-
-function headerBackground() {
-    'use strict';
-    if (breakPoint >= 992) {
-        if (scrollPosition >= 10) {
-            header.addClass('bg-darker fixed-header');
-        } else {
-            header.removeClass('bg-darker fixed-header');
-        }
-    } else {
-        if (!nav.hasClass('main-nav-is-active')) {
-            if (scrollPosition >= 1) {
-                header.addClass('bg-darker');
-            } else {
-                header.removeClass('bg-darker');
-            }
-        } else {
-            header.addClass('bg-darker');
-        }
-    }
-}
 
 //-------------------------------------------------------------------
 // FUNCTION: SCROLL NAVIGATION
@@ -130,9 +128,14 @@ $(navBtn).on('click', function () {
 
 $(activateScroll).on('click', function () {
     'use strict';
-    closeNavigation();
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (breakPoint <= 992) {
+        nav.removeClass('main-nav-is-active');
+        if ((target.offset().top === 0) && (header.offset().top === 0)) {
+            header.removeClass('bg-darker');
+        }
+    }
     if (target.length) {
         $(page).animate({
             scrollTop: target.offset().top
@@ -141,5 +144,5 @@ $(activateScroll).on('click', function () {
     }
 });
 
-$(window).on('scroll resize', headerBackground);
+$(window).on('resize scroll', headerBackground);
 $(window).on('load scroll', scrollNavigation);

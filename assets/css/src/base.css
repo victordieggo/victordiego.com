@@ -58,10 +58,10 @@
     display: inline;
 }
 
-.inline-block,
-.vcenter,
 .btn,
-.label {
+.label,
+.vcenter,
+.inline-block {
     display: inline-block;
 }
 
@@ -297,8 +297,8 @@ textarea {
 
 /*=============================== MISC ===============================*/
 
-.wrapper-large,
 .wrapper,
+.wrapper-large,
 .centered {
     margin: 0 auto;
 }
