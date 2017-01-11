@@ -20,17 +20,13 @@ textarea {
 input:not(.btn):focus,
 select:focus,
 textarea:focus {
-    border-color: #909090;
+    border-color: #0f6889;
 }
 
 input:not(.btn),
+textarea,
 select {
-    height: 2.6em;
-    padding: 0 1em;
-}
-
-textarea {
-    padding: 1em;
+    padding: 0.8em;
 }
 
 /*======================== CUSTOM SELECT ARROW =======================*/

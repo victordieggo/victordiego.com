@@ -29,6 +29,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-angle-up:before {
+  content: "\f106";
+}
+
 .icon-envelope:before {
   content: "\f003";
 }
@@ -51,6 +55,10 @@
 
 .icon-circle:before {
   content: "\f111";
+}
+
+.icon-circle-thin:before {
+  content: "\f1db";
 }
 
 .icon-instagram:before {

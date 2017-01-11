@@ -19,7 +19,7 @@ body,
 
 hr,
 .bg-lightgrey {
-    background-color: #eee;
+    background-color: #f1f1f1;
 }
 
 .bg-grey {
@@ -70,7 +70,7 @@ hr,
  * ===================================================================*/
 
 .about {
-    background: url('../../img/header.png') fixed center center no-repeat;
+    background: #141414 url('../../img/header.png') fixed center center no-repeat;
     background-size: cover;
 }
 
