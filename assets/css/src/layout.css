@@ -34,13 +34,6 @@ hr {
     background-color: transparent;
 }
 
-.about,
-.bg-image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
- }
-
 /* =====================================================================
  * HEADER
  * ===================================================================*/
@@ -50,8 +43,12 @@ hr {
   top: 0;
 }
 
-.fixed-header .row {
-  padding: 0.3em 0.7em;
+@media only screen and (min-width: 993px) {
+
+  .fixed-header .row {
+    padding: 0.3em 0.7em;
+  }
+
 }
 
 .logo:before {
@@ -73,7 +70,8 @@ section:not(.about) {
  * ===================================================================*/
 
 .about {
-  background-image: url('../../img/bg-about.png');
+  background: url('../../img/bg-about.png') fixed center center no-repeat;
+  background-size: cover;
 }
 
 .about .row {
