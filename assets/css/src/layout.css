@@ -34,6 +34,11 @@ hr {
     background-color: transparent;
 }
 
+.icon,
+.about {
+  background-size: cover;
+}
+
 /* =====================================================================
  * HEADER
  * ===================================================================*/
@@ -70,19 +75,32 @@ section:not(.about) {
  * ===================================================================*/
 
 .about {
-  background: url('../../img/bg-about.png') fixed center center no-repeat;
-  background-size: cover;
+  background-image: url('../../img/bg-about.png');
+}
+
+/* IE FLEXBOX MIN-HEIGHT FIX */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  .about .wrapper-large {
+    display: flex;
+    flex-direction: row;
+  }
+
 }
 
 .about .row {
+  min-height: 45em;
   align-items: center;
-  height: 90vh;
+}
+
+.about h1 {
+  line-height: 1.2em;
 }
 
 @media only screen and (max-width: 480px) {
 
   .about .row {
-    height: 100vh;
+    min-height: 40em;
   }
 
   .about h1 {
@@ -91,6 +109,33 @@ section:not(.about) {
 
 }
 
+.about article {
+  line-height: 1.8em;
+}
+
+/*=============================== ICONS ==============================*/
+
+.icon {
+  margin: 0 0.4em;
+  height: 28px;
+  width: 28px;
+}
+
+.icon-github {
+  background-image: url('../../svg/icon-github.svg');
+}
+
+.icon-linkedin {
+  background-image: url('../../svg/icon-linkedin.svg');
+}
+
+.icon-pdf {
+  background-image: url('../../svg/icon-pdf.svg');
+}
+
+.icon:hover {
+  opacity: 0.4;
+}
 
 /* =====================================================================
  * PROJECTS

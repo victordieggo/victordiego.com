@@ -12,13 +12,13 @@ $(document).ready(function () {
         navBtn         = $('.nav-btn'),
         parentItem     = $('.menu-item-has-children'),
         header         = $('.main-header'),
-        page           = $('body'),
+        page           = $('html, body'),
         activateScroll = $('a[href*="#"]'),
         browser        = $(window);
 
     // add/remove header background
     function headerBackground() {
-        if (window.innerWidth >= 992) {
+        if (window.innerWidth >= 993) {
             if (browser.scrollTop() >= 15) {
                 header.addClass('bg-darker fixed-header');
             } else {
@@ -26,7 +26,7 @@ $(document).ready(function () {
             }
         } else {
             if (!nav.hasClass('main-nav-is-active')) {
-                if (browser.scrollTop() > 0) {
+                if (browser.scrollTop() > 15) {
                     header.addClass('bg-darker');
                 } else {
                     header.removeClass('bg-darker');

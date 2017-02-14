@@ -2,6 +2,9 @@
  * TYPOGRAPHY
  * ===================================================================*/
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans');
+
+
 /*======================== FONT-FAMILY/HEIGHT ========================*/
 
 body,
@@ -11,17 +14,12 @@ textarea {
     font-family: 'Open Sans', sans-serif;
 }
 
-.droidserif {
-    font-family: 'Droid Serif', serif;
-    font-weight: lighter;
-}
-
 .btn,
 .logo,
 .main-nav,
 .montserrat {
     font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
+    font-weight: 500;
 }
 
 /*============================ FONT-SIZE =============================*/
