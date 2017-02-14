@@ -78,18 +78,8 @@ section:not(.about) {
   background-image: url('../../img/bg-about.png');
 }
 
-/* IE FLEXBOX MIN-HEIGHT FIX */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-
-  .about .wrapper-large {
-    display: flex;
-    flex-direction: row;
-  }
-
-}
-
 .about .row {
-  min-height: 45em;
+  height: 45em;
   align-items: center;
 }
 
@@ -100,7 +90,7 @@ section:not(.about) {
 @media only screen and (max-width: 480px) {
 
   .about .row {
-    min-height: 40em;
+    height: 40em;
   }
 
   .about h1 {
@@ -138,11 +128,41 @@ section:not(.about) {
 }
 
 /* =====================================================================
- * PROJECTS
+ * WORK
  * ===================================================================*/
 
-.project-wrapper:nth-child(even) > .row {
-  flex-direction: row-reverse;
+@media only screen and (min-width: 769px) {
+
+  .project-wrapper {
+    overflow: hidden;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .project-wrapper img {
+    margin-left: -6em;
+  }
+
+ .project-wrapper:nth-child(even) {
+   flex-direction: row-reverse;
+ }
+
+ .project-wrapper:nth-child(even) img {
+   margin-left: 6em;
+ }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .project-wrapper {
+    padding: 2em;
+  }
+
+  .project-wrapper img {
+    margin-bottom: 1em;
+  }
+
 }
 
 /* =====================================================================
