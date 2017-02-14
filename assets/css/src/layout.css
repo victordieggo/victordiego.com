@@ -5,37 +5,38 @@
 /*============================ MAIN COLORS ===========================*/
 
 .bg-main {
-    background-color: #0f6889;
+    background-color: #0d6788;
 }
 
-.bg-alt {
-    background-color: #e0b723;
-}
-
-body,
-.bg-light {
+.bg-white {
     background-color: #fff;
 }
 
-hr,
-.bg-lightgrey {
-    background-color: #f1f1f1;
+.bg-lightgrey,
+hr {
+    background-color: #e3e3e3;
 }
 
 .bg-grey {
     background-color: #afafaf;
 }
 
-.bg-dark {
+.bg-dark,
+.main-nav li ul {
     background-color: #222;
 }
 
 .bg-darker {
-    background-color: #1a1a1a;
+    background-color: #121212;
 }
 
 .bg-none {
     background-color: transparent;
+}
+
+.icon,
+.about {
+  background-size: cover;
 }
 
 /* =====================================================================
@@ -43,26 +44,30 @@ hr,
  * ===================================================================*/
 
 .main-header {
-    z-index: 10;
-    top: 0;
+  z-index: 10;
+  top: 0;
 }
 
 @media only screen and (min-width: 993px) {
 
-    .fixed-header .row {
-        padding: 0.3% 1%;
-    }
+  .fixed-header .row {
+    padding: 0.3em 0.7em;
+  }
 
 }
 
 .logo:before {
-    margin-right: 0.1em;
-    content: "{";
+  margin-right: 0.1em;
+  content: "{";
 }
 
 .logo:after {
-    margin-left: 0.1em;
-    content: "}";
+  margin-left: 0.1em;
+  content: "}";
+}
+
+section:not(.about) {
+  padding: 5em 0;
 }
 
 /* =====================================================================
@@ -70,20 +75,74 @@ hr,
  * ===================================================================*/
 
 .about {
-    background: #141414 url('../../img/header.png') fixed center center no-repeat;
-    background-size: cover;
+  background-image: url('../../img/bg-about.png');
 }
 
-.about .table {
-    height: 65vh;
+/* IE FLEXBOX MIN-HEIGHT FIX */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  .about .wrapper-large {
+    display: flex;
+    flex-direction: row;
+  }
+
 }
 
-.about a {
-    margin-right: 0.5em;
+.about .row {
+  min-height: 45em;
+  align-items: center;
 }
 
-section {
-    padding: 5em 0;
+.about h1 {
+  line-height: 1.2em;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .about .row {
+    min-height: 40em;
+  }
+
+  .about h1 {
+    font-size: 2em;
+  }
+
+}
+
+.about article {
+  line-height: 1.8em;
+}
+
+/*=============================== ICONS ==============================*/
+
+.icon {
+  margin: 0 0.4em;
+  height: 28px;
+  width: 28px;
+}
+
+.icon-github {
+  background-image: url('../../svg/icon-github.svg');
+}
+
+.icon-linkedin {
+  background-image: url('../../svg/icon-linkedin.svg');
+}
+
+.icon-pdf {
+  background-image: url('../../svg/icon-pdf.svg');
+}
+
+.icon:hover {
+  opacity: 0.4;
+}
+
+/* =====================================================================
+ * PROJECTS
+ * ===================================================================*/
+
+.project-wrapper:nth-child(even) > .row {
+  flex-direction: row-reverse;
 }
 
 /* =====================================================================

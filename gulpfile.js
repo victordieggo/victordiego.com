@@ -25,7 +25,6 @@ gulp.task('css', function () {
         'assets/css/src/reset.css',
         'assets/css/src/grid.css',
         'assets/css/src/typography.css',
-        'assets/css/src/icons.css',
         'assets/css/src/base.css',
         'assets/css/src/form.css',
         'assets/css/src/buttons.css',
@@ -59,8 +58,7 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
     browserSync.init({
-        proxy: 'localhost/' + path.basename(__dirname),
-        open: false
+        proxy: 'localhost/' + path.basename(__dirname)
     });
     gulp.watch(['assets/js/src/*.js'], ['js']);
     gulp.watch(['assets/css/src/*.css'], ['css']);
