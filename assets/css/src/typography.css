@@ -4,7 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
 
-
 /*======================== FONT-FAMILY/HEIGHT ========================*/
 
 body,
@@ -12,7 +11,6 @@ input,
 select,
 textarea {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
 }
 
 .btn,
@@ -20,7 +18,11 @@ textarea {
 .main-nav,
 .montserrat {
     font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
+    font-weight: 400;
+}
+
+.logo {
+  font-weight: 500;
 }
 
 /*============================ FONT-SIZE =============================*/
@@ -80,7 +82,7 @@ h1,
 /*============================ FONT-COLOR ============================*/
 
 .text-main {
-    color: #e0b723;
+    color: #0f6889;
 }
 
 .text-alt,
@@ -93,6 +95,10 @@ h1,
 .btn,
 body {
     color: #222;
+}
+
+.text-grey {
+  color: #3c3b3b;
 }
 
 .about,
@@ -115,8 +121,7 @@ blockquote,
 }
 
 .btn,
-.align-center,
-.project-description {
+.align-center {
     text-align: center;
 }
 

@@ -66,16 +66,13 @@ hr {
   content: "}";
 }
 
-section:not(.about) {
-  padding: 5em 0;
-}
-
 /* =====================================================================
  * ABOUT
  * ===================================================================*/
 
 .about {
   position: relative;
+  /*background-color: #131a21;*/
   background-image: url('../../img/bg-about.png');
   background-attachment: fixed;
 }
@@ -95,25 +92,15 @@ section:not(.about) {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0d11', endColorstr='#131a21', GradientType=0 );
 }
 
-.about .row {
-  align-items: center;
-}
-
-.about .row,
-.about:before {
-  height: 45em;
+.about article {
+  padding: 28% 2%;
 }
 
 .about h1 {
   line-height: 1.2em;
 }
 
-@media only screen and (max-width: 480px) {
-
-  .about .row,
-  .about:before {
-    height: 40em;
-  }
+@media only screen and (max-width: 768px) {
 
   .about h1 {
     font-size: 2em;
@@ -126,39 +113,35 @@ section:not(.about) {
 }
 
 /* =====================================================================
- * WORK
+ * PROJECTS
  * ===================================================================*/
+
+.projects {
+  padding: 5% 0;
+}
 
 @media only screen and (min-width: 769px) {
 
-  .project-wrapper {
-    padding-top: 2em;
-    padding-bottom: 2em;
-  }
-
-  .project-wrapper img {
-    width: 85%;
-    margin: 0 -3em;
-  }
-
- .project-wrapper:nth-child(even) {
+ .project-wrapper:nth-child(odd) {
    flex-direction: row-reverse;
- }
-
- .project-wrapper:nth-child(even) .project-thumbnail {
-   text-align: right;
  }
 
 }
 
+.personal-projects {
+  background-color: #ddd;
+  padding: 5% 0;
+}
+
+.personal-projects img {
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 768px) {
 
-  .project-wrapper {
-    padding: 2em;
-  }
-
-  .project-wrapper img {
-    margin-bottom: 1em;
+  .project-wrapper img,
+  .project-wrapper article {
+    padding: 0 5%;
   }
 
 }

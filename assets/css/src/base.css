@@ -205,7 +205,8 @@ textarea,
 
 textarea,
 .full-size,
-.full-height {
+.full-height,
+.about:before {
     height: 100%;
 }
 
