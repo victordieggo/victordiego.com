@@ -2,7 +2,7 @@
  * TYPOGRAPHY
  * ===================================================================*/
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
 
 
 /*======================== FONT-FAMILY/HEIGHT ========================*/
@@ -12,6 +12,7 @@ input,
 select,
 textarea {
     font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
 }
 
 .btn,
@@ -19,7 +20,7 @@ textarea {
 .main-nav,
 .montserrat {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: lighter;
 }
 
 /*============================ FONT-SIZE =============================*/
@@ -56,12 +57,12 @@ h5,
 }
 
 h4,
+.logo,
 .title-4 {
     font-size: 1.6em;
 }
 
 h3,
-.logo,
 .title-3 {
     font-size: 1.9em;
 }
@@ -86,7 +87,7 @@ h1,
 .logo:after,
 .logo:before,
 .about .icon {
-    color: #e0b723;
+    color: #c69b34;
 }
 
 .btn,
@@ -114,7 +115,8 @@ blockquote,
 }
 
 .btn,
-.align-center {
+.align-center,
+.project-description {
     text-align: center;
 }
 
