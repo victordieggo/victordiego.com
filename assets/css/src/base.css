@@ -32,7 +32,8 @@
 .show-md,
 .show-sm,
 .show-xs,
-.absolute {
+.absolute,
+.about:before {
     position: absolute;
 }
 
@@ -197,13 +198,15 @@ select,
 textarea,
 .full-size,
 .full-width,
-.main-header {
+.main-header,
+.about:before {
     width: 100%;
 }
 
 textarea,
 .full-size,
-.full-height {
+.full-height,
+.about:before {
     height: 100%;
 }
 

@@ -7,7 +7,6 @@ $(document).ready(function () {
 
     'use strict';
 
-    // set variables
     var nav            = $('.main-nav'),
         navBtn         = $('.nav-btn'),
         parentItem     = $('.menu-item-has-children'),
@@ -16,13 +15,12 @@ $(document).ready(function () {
         activateScroll = $('a[href*="#"]'),
         browser        = $(window);
 
-    // add/remove header background
     function headerBackground() {
         if (window.innerWidth >= 993) {
             if (browser.scrollTop() >= 15) {
-                header.addClass('bg-darker fixed-header');
+                header.addClass('bg-darker');
             } else {
-                header.removeClass('bg-darker fixed-header');
+                header.removeClass('bg-darker');
             }
         } else {
             if (!nav.hasClass('main-nav-is-active')) {
@@ -37,13 +35,11 @@ $(document).ready(function () {
         }
     }
 
-    // show/hide mobile navigation
     navBtn.on('click', function () {
         nav.toggleClass('main-nav-is-active');
         headerBackground();
     });
 
-    // navigation sub-items
     parentItem.each(function () {
         $('a:first', this).click(function (event) {
             event.preventDefault();
@@ -58,7 +54,6 @@ $(document).ready(function () {
         });
     });
 
-    // show current section on navigation
     browser.on('load scroll resize', function () {
         $('section').each(function (i) {
             if ($(this).position().top <= browser.scrollTop() + 80) {
@@ -69,7 +64,6 @@ $(document).ready(function () {
         headerBackground();
     });
 
-    // scroll to target
     activateScroll.on('click', function () {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');

@@ -2,8 +2,7 @@
  * TYPOGRAPHY
  * ===================================================================*/
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
 
 /*======================== FONT-FAMILY/HEIGHT ========================*/
 
@@ -19,7 +18,11 @@ textarea {
 .main-nav,
 .montserrat {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
+}
+
+.logo {
+  font-weight: 500;
 }
 
 /*============================ FONT-SIZE =============================*/
@@ -56,12 +59,12 @@ h5,
 }
 
 h4,
+.logo,
 .title-4 {
     font-size: 1.6em;
 }
 
 h3,
-.logo,
 .title-3 {
     font-size: 1.9em;
 }
@@ -79,19 +82,23 @@ h1,
 /*============================ FONT-COLOR ============================*/
 
 .text-main {
-    color: #e0b723;
+    color: #0f6889;
 }
 
 .text-alt,
 .logo:after,
 .logo:before,
 .about .icon {
-    color: #e0b723;
+    color: #c69b34;
 }
 
 .btn,
 body {
     color: #222;
+}
+
+.text-grey {
+  color: #3c3b3b;
 }
 
 .about,
