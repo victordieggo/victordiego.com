@@ -2,7 +2,33 @@
  * TYPOGRAPHY
  * ===================================================================*/
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+    font-family:'Seravek Light';
+    src: url('../../fonts/seravek/Seravek-Light.eot');
+    src: url('../../fonts/seravek/Seravek-Light.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/seravek/Seravek-Light.woff2') format('woff2'),
+		url('../../fonts/seravek/Seravek-Light.woff') format('woff'),
+		url('../../fonts/seravek/Seravek-Light.svg#Seravek-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+@font-face {
+    font-family:'Seravek Medium';
+    src: url('../../fonts/seravek/Seravek-Medium.eot');
+	  src: url('../../fonts/seravek/Seravek-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/seravek/Seravek-Medium.woff2') format('woff2'),
+		url('../../fonts/seravek/Seravek-Medium.woff') format('woff'),
+		url('../../fonts/seravek/Seravek-Medium.svg#Seravek-Medium') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
 
 /*======================== FONT-FAMILY/HEIGHT ========================*/
 
@@ -13,26 +39,28 @@ textarea {
     font-family: 'Open Sans', sans-serif;
 }
 
+.seravek-light {
+    font-family:'Seravek Light';
+}
+
 .btn,
 .logo,
 .main-nav,
-.montserrat {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-}
-
-.logo {
-  font-weight: 500;
+.seravek-medium {
+    font-family:'Seravek Medium';
 }
 
 /*============================ FONT-SIZE =============================*/
 
-.btn,
 body,
 input,
 select,
 textarea {
     font-size: 1em;
+}
+
+.btn {
+  font-size: 0.9em;
 }
 
 small,
@@ -87,8 +115,7 @@ h1,
 
 .text-alt,
 .logo:after,
-.logo:before,
-.about .icon {
+.logo:before {
     color: #c69b34;
 }
 

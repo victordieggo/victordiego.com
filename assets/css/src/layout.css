@@ -34,11 +34,6 @@ hr {
     background-color: transparent;
 }
 
-.icon,
-.about {
-  background-size: cover;
-}
-
 /* =====================================================================
  * HEADER
  * ===================================================================*/
@@ -72,8 +67,9 @@ hr {
 
 .about {
   position: relative;
-  background-image: url('../../img/bg-about.png');
+  background-size: cover;
   background-attachment: fixed;
+  background-image: url('../../img/bg-about.png');
 }
 
 .about:before {

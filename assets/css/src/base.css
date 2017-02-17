@@ -63,7 +63,6 @@ textarea {
 }
 
 .btn,
-.icon,
 .label,
 .vcenter,
 .inline-block {
@@ -236,14 +235,12 @@ hr {
 }
 
 .btn,
-.icon,
 input,
 select,
 textarea,
 .main-nav,
 .main-nav a,
 .main-header,
-.main-header .row,
 .smooth-transition {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
