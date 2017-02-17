@@ -72,7 +72,6 @@ hr {
 
 .about {
   position: relative;
-  /*background-color: #131a21;*/
   background-image: url('../../img/bg-about.png');
   background-attachment: fixed;
 }
