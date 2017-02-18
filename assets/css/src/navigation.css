@@ -106,7 +106,6 @@
         top: 0;
         bottom: 0;
         right: 1.5em;
-        content: "";
         padding: 0.8em;
         background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDguNyA1My41Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNOTYuOCAxLjZDODkuNSA3IDgyLjggMTMuMyA3NS45IDE5Yy03LjIgNi0xNC4zIDEyLTIxLjUgMTcuOS0xNC0xMS44LTI3LjctMjQuMS00Mi4yLTM1LjJDNy43LTEuNi43LS4xIDAgNi4xYy0uNCA0LjEgMi41IDYuMiA1LjIgOC41IDkgNy41IDE4LjEgMTUuMSAyNy4xIDIyLjYgNC42IDMuOSA5LjMgNy43IDEzLjkgMTEuNiAzLjggMy4xIDcuMSA2LjEgMTIuMiAzLjEuMi0uMS40LS4zLjYtLjQgMTUtMTIuNCAyOS45LTI0LjggNDQuOC0zNy4yIDIuNS0yLjEgNS0zLjkgNC45LTcuNi0uMy02LjQtNy4zLTguNS0xMS45LTUuMXoiLz48L3N2Zz4=) no-repeat right;
         background-size: 65%;

@@ -63,7 +63,6 @@ textarea {
 }
 
 .btn,
-.icon,
 .label,
 .vcenter,
 .inline-block {
@@ -212,6 +211,11 @@ textarea,
 
 /*=============================== MISC ===============================*/
 
+:before,
+:after {
+  content: '';
+}
+
 img {
     max-width: 100%;
 }
@@ -236,14 +240,12 @@ hr {
 }
 
 .btn,
-.icon,
 input,
 select,
 textarea,
 .main-nav,
 .main-nav a,
 .main-header,
-.main-header .row,
 .smooth-transition {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
