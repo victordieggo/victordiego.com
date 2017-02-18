@@ -2,33 +2,11 @@
  * TYPOGRAPHY
  * ===================================================================*/
 
+ /*========================= FONT-FACE/IMPORTS =======================*/
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-@font-face {
-    font-family:'Seravek Light';
-    src: url('../../fonts/seravek/Seravek-Light.eot');
-    src: url('../../fonts/seravek/Seravek-Light.eot?#iefix') format('embedded-opentype'),
-		url('../../fonts/seravek/Seravek-Light.woff2') format('woff2'),
-		url('../../fonts/seravek/Seravek-Light.woff') format('woff'),
-		url('../../fonts/seravek/Seravek-Light.svg#Seravek-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    unicode-range: U+0020-00FE;
-}
-
-@font-face {
-    font-family:'Seravek Medium';
-    src: url('../../fonts/seravek/Seravek-Medium.eot');
-	  src: url('../../fonts/seravek/Seravek-Medium.eot?#iefix') format('embedded-opentype'),
-		url('../../fonts/seravek/Seravek-Medium.woff2') format('woff2'),
-		url('../../fonts/seravek/Seravek-Medium.woff') format('woff'),
-		url('../../fonts/seravek/Seravek-Medium.svg#Seravek-Medium') format('svg');
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    unicode-range: U+0020-00FE;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500');
 
 /*======================== FONT-FAMILY/HEIGHT ========================*/
 
@@ -36,18 +14,21 @@ body,
 input,
 select,
 textarea {
-    font-family: 'Open Sans', sans-serif;
-}
-
-.seravek-light {
-    font-family:'Seravek Light';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .btn,
 .logo,
 .main-nav,
-.seravek-medium {
-    font-family:'Seravek Medium';
+.about h1,
+.project-description,
+.font-alt {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
 }
 
 /*============================ FONT-SIZE =============================*/
@@ -56,7 +37,7 @@ body,
 input,
 select,
 textarea {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .btn {
@@ -67,7 +48,7 @@ small,
 .btn-small,
 .text-small,
 .input-small {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 h6,
@@ -75,7 +56,7 @@ h6,
 blockquote,
 .logo:before,
 .logo:after {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 h5,
@@ -83,47 +64,48 @@ h5,
 .btn-large,
 .text-large,
 .input-large {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 h4,
 .logo,
 .title-4 {
-    font-size: 1.6em;
+  font-size: 1.6em;
 }
 
 h3,
 .title-3 {
-    font-size: 1.9em;
+  font-size: 1.9em;
 }
 
 h2,
 .title-2 {
-    font-size: 2.2em;
+  font-size: 2.2em;
 }
 
 h1,
 .title-1 {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 /*============================ FONT-COLOR ============================*/
 
 .text-main {
-    color: #0f6889;
+  color: #0f6889;
 }
 
 .text-alt,
 .logo:after,
 .logo:before {
-    color: #c69b34;
+  color: #c69b34;
 }
 
 .btn,
 body {
-    color: #222;
+  color: #222;
 }
 
+.project-description p,
 .text-grey {
   color: #3c3b3b;
 }
@@ -132,11 +114,11 @@ body {
 .main-header,
 .text-light,
 .btn:hover {
-    color: #fff;
+  color: #fff;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 /*=============================== MISC ===============================*/
@@ -144,37 +126,37 @@ a {
 article,
 blockquote,
 .text-block {
-    line-height: 160%;
+  line-height: 160%;
 }
 
 .btn,
 .align-center {
-    text-align: center;
+  text-align: center;
 }
 
 .align-left {
-    text-align: left;
+  text-align: left;
 }
 
 .align-right {
-    text-align: right;
+  text-align: right;
 }
 
 a,
 .btn:hover,
 .main-nav a:hover,
 .no-underline:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .btn,
 .logo,
 .text-uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /*======================= SMALL/SM RESOLUTIONS =======================*/
@@ -182,7 +164,7 @@ a:hover {
 @media only screen and (max-width: 768px) {
 
     body {
-        font-size: 0.9em;
+      font-size: 0.9em;
     }
 
 }
