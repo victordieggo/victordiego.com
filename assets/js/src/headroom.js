@@ -465,10 +465,10 @@
     var header = document.querySelector("header"),
         headroom = new Headroom(header, {
             onPin : function() {
-                console.log('up');
+                // console.log('up');
             },
             onUnpin : function () {
-                console.log('down');
+                // console.log('down');
                 $('.main-nav').removeClass('main-nav-is-active');
             }
         });

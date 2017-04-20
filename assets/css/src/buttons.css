@@ -5,33 +5,33 @@
  /*============================ MAIN BUTTON ===========================*/
 
 .btn {
-    background-color: #0f6889;
-    border: solid 2px #0f6889;
-    border-radius: 0.2em;
-    padding: 0 1em;
-    white-space: normal;
+  background-color: #0f6889;
+  border: solid 2px #0f6889;
+  border-radius: 0.2em;
+  padding: 0 1em;
+  white-space: normal;
 }
 
 .btn:hover {
-    background-color: #0d5b78;
-    border-color: #0d5b78;
+  background-color: #0d5b78;
+  border-color: #0d5b78;
 }
 
 /*============================ ALT BUTTON ============================*/
 
 .btn-alt {
-    background-color: #e0b723;
-    border-color: #e0b723;
+  background-color: #e0b723;
+  border-color: #e0b723;
 }
 
 .btn-alt:hover {
-    background-color: #e0b723;
-    border-color: #e0b723;
+  background-color: #e0b723;
+  border-color: #e0b723;
 }
 
 /*========================== OUTLINE BUTTONS =========================*/
 
 button,
 .btn-outline {
-    background-color: transparent;
+  background-color: transparent;
 }

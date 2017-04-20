@@ -20,14 +20,19 @@ textarea {
 .btn,
 .logo,
 .main-nav,
-.about h1,
+.about .title-1,
 .project-description,
 .font-alt {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+.title-5,
+.title-6 {
   font-weight: inherit;
 }
 

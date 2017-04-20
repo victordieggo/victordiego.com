@@ -5,27 +5,27 @@
 /*============================= FLOATING =============================*/
 
 .fleft {
-    float: left;
+  float: left;
 }
 
 .fright {
-    float: right;
+  float: right;
 }
 
 .fnone,
 .vcenter,
 .centered {
-    float: none;
+  float: none;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 /*============================= POSITION =============================*/
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 .hide,
@@ -34,52 +34,52 @@
 .show-xs,
 .absolute,
 .about:before {
-    position: absolute;
+  position: absolute;
 }
 
 .fixed,
 .main-header {
-    position: fixed;
+  position: fixed;
 }
 
 .hide,
 .show-md,
 .show-sm,
 .show-xs {
-    left: -9999px;
-    top: -9999px;
-    visibility: hidden;
+  left: -9999px;
+  top: -9999px;
+  visibility: hidden;
 }
 
 /*============================== DISPLAY =============================*/
 
 .block,
 textarea {
-    display: block;
+  display: block;
 }
 
 .inline {
-    display: inline;
+  display: inline;
 }
 
 .btn,
 .label,
 .vcenter,
 .inline-block {
-    display: inline-block;
+  display: inline-block;
 }
 
 .table {
-    display: table;
+  display: table;
 }
 
 .table-cell {
-    display: table-cell;
+  display: table-cell;
 }
 
 input[type=radio],
 input[type=checkbox] {
-    display: none;
+  display: none;
 }
 
 /*============================= SPACERS ==============================*/
@@ -138,24 +138,24 @@ input,
 select,
 button,
 textarea {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 select::-ms-expand {
-    display: none;
+  display: none;
 }
 
 textarea {
-    resize: none;
-    overflow-y: auto;
+  resize: none;
+  overflow-y: auto;
 }
 
 ::-webkit-input-placeholder {
-    color: #888;
+  color: #888;
 }
 
 :-ms-input-placeholder {
-    color: #888;
+  color: #888;
 }
 
 .btn,
@@ -163,16 +163,16 @@ input,
 button,
 select,
 textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 0.2em;
-    height: 2.7em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.2em;
+  height: 2.7em;
 }
 
 .btn {
-    vertical-align: top;
-    line-height: calc(2.7em - 4px);
+  vertical-align: top;
+  line-height: calc(2.7em - 4px);
 }
 
 /* =====================================================================
@@ -184,12 +184,12 @@ textarea {
 .btn,
 .auto-size,
 .auto-width {
-    width: auto;
+  width: auto;
 }
 
 .auto-size,
 .auto-height {
-    height: auto;
+  height: auto;
 }
 
 input,
@@ -199,14 +199,14 @@ textarea,
 .full-width,
 .main-header,
 .about:before {
-    width: 100%;
+  width: 100%;
 }
 
 textarea,
 .full-size,
 .full-height,
 .about:before {
-    height: 100%;
+  height: 100%;
 }
 
 /*=============================== MISC ===============================*/
@@ -217,26 +217,26 @@ textarea,
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 hr {
-    border: 0;
-    height: 1px;
+  border: 0;
+  height: 1px;
 }
 
 .hide-overflow {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .label,
 .vcenter {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .circle,
 .label-radio:before {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .btn,
@@ -247,15 +247,15 @@ textarea,
 .main-nav a,
 .main-header,
 .smooth-transition {
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 
 .label {
-    padding: 0.4em 0.6em;
-    border-radius: 0.2em;
+  padding: 0.4em 0.6em;
+  border-radius: 0.2em;
 }
 
 /* =====================================================================
@@ -267,17 +267,17 @@ textarea,
 @media only screen and (max-width: 992px) {
 
     .show-md {
-        position: static;
-        left: 0;
-        top: 0;
-        visibility: visible;
+      position: static;
+      left: 0;
+      top: 0;
+      visibility: visible;
     }
 
     .hide-md {
-        position: absolute;
-        left: -9999px;
-        top: -9999px;
-        visibility: hidden;
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      visibility: hidden;
     }
 
 }
@@ -287,17 +287,17 @@ textarea,
 @media only screen and (max-width: 768px) {
 
     .show-sm {
-        position: static;
-        left: 0;
-        top: 0;
-        visibility: visible;
+      position: static;
+      left: 0;
+      top: 0;
+      visibility: visible;
     }
 
     .hide-sm {
-        position: absolute;
-        left: -9999px;
-        top: -9999px;
-        visibility: hidden;
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      visibility: hidden;
     }
 
 }
@@ -307,17 +307,17 @@ textarea,
 @media only screen and (max-width: 480px) {
 
     .show-xs {
-        position: static;
-        left: 0;
-        top: 0;
-        visibility: visible;
+      position: static;
+      left: 0;
+      top: 0;
+      visibility: visible;
     }
 
     .hide-xs {
-        position: absolute;
-        left: -9999px;
-        top: -9999px;
-        visibility: hidden;
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      visibility: hidden;
     }
 
 }
