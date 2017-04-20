@@ -43,10 +43,6 @@ hr {
   top: 0;
 }
 
-.headroom--unpinned {
-  top: -5em;
-}
-
 .logo:before {
   margin-right: 0.1em;
   content: "{";
@@ -55,6 +51,10 @@ hr {
 .logo:after {
   margin-left: 0.1em;
   content: "}";
+}
+
+.headroom--unpinned {
+  top: -6em;
 }
 
 /* =====================================================================
@@ -72,10 +72,8 @@ hr {
   top: 0;
   left: 0;
   z-index: -1;
-  background: -webkit-linear-gradient(#0a0d11, #131a21);
-  background: -moz-linear-gradient(#0a0d11, #131a21);
-  background: -o-linear-gradient(#0a0d11, #131a21);
-  background: linear-gradient(#0a0d11, #131a21);
+  background: #0a0d11;
+  background: linear-gradient(to top, #131a21 0%, #0a0d11 100%);
 }
 
 .about .wrapper-large {
@@ -104,7 +102,7 @@ hr {
     min-height: 100vh;
   }
 
-  .about h1 {
+  .about .title-1 {
     font-size: 2em;
   }
 
