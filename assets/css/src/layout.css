@@ -5,33 +5,33 @@
 /*============================ MAIN COLORS ===========================*/
 
 .bg-main {
-    background-color: #0d6788;
+  background-color: #0d6788;
 }
 
 .bg-white {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .bg-lightgrey,
 hr {
-    background-color: #e3e3e3;
+  background-color: #e3e3e3;
 }
 
 .bg-grey {
-    background-color: #afafaf;
+  background-color: #afafaf;
 }
 
 .bg-dark,
 .main-nav li ul {
-    background-color: #222;
+  background-color: #222;
 }
 
 .bg-darker {
-    background-color: #0f1113;
+  background-color: #0f1113;
 }
 
 .bg-none {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* =====================================================================
@@ -43,18 +43,26 @@ hr {
   top: 0;
 }
 
+.main-header .row {
+  padding: 0 0.7em;
+}
+
+.main-header .col-6:last-child {
+  text-align: right;
+}
+
+.hidden-header {
+  transform: translateY(-100%);
+}
+
 .logo:before {
-  margin-right: 0.1em;
   content: "{";
+  margin-right: 0.1em;
 }
 
 .logo:after {
-  margin-left: 0.1em;
   content: "}";
-}
-
-.headroom--unpinned {
-  top: -6em;
+  margin-left: 0.1em;
 }
 
 /* =====================================================================
@@ -83,7 +91,7 @@ hr {
 
 .about .row {
   padding: 5em 1.5em;
-  min-height: 92vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
 }
@@ -98,12 +106,9 @@ hr {
 
 @media only screen and (max-width: 768px) {
 
-  .about .row {
-    min-height: 100vh;
-  }
-
   .about .title-1 {
     font-size: 2em;
+    line-height: 1.3em;
   }
 
 }
