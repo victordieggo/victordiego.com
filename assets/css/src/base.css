@@ -168,6 +168,7 @@ textarea {
   appearance: none;
   border-radius: 0.2em;
   height: 2.7em;
+  font-size: 90%;
 }
 
 .btn {

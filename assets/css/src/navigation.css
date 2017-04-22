@@ -66,6 +66,7 @@
       overflow-x: hidden;
       height: 0;
       background-color: #1d1d1d;
+      text-align: left;
     }
 
     .main-nav-is-active {
